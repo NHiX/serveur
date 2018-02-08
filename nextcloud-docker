@@ -1,0 +1,8 @@
+Installation de NextCloud avec Docker
+
+Non-fonctionnelle
+
+
+
+docker run -d --name=nextcloud -p 443:443 -e PUID=1000 -e PGID=2000 \
+-v /home/docker/data:/data -v /home/docker/config:/config linuxserver/nextcloud
