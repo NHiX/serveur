@@ -4,3 +4,9 @@ mkdir /home/docker/squid/logs
 mkdir /home/docker/squid/logs
 
 docker run --name squid -d -p 3128:3128 --volume /home/docker/squid/logs:/var/log/squid --volume /home/docker/squid/cache:/var/spool/squid datadog/squid
+
+On donne les variables d'environment 
+
+export http_proxy=localhost:3128
+export https_proxy=localhost:3128
+export ftp_proxy=localhost:3128
