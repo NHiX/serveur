@@ -1,0 +1,10 @@
+Installation transmission dans un container
+
+création des répertoires:
+
+mkdir /home/docker/config
+mkdir /home/docker/data
+mkdir /home/docker/watch
+
+
+docker run -d --name=transmission -v /home/docker/config:/config -v /home/docker/data:/downloads -v /home/docker/watch:/watch -p 9091:9091 -p 51413:51413/udp linuxserver/transmission
