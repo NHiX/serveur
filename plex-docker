@@ -9,7 +9,7 @@ docker run -d --name plex --network=host -e TZ="<timezone>" -e PLEX_CLAIM="<clai
 plexinc/pms-docker
 
 
-docker run -d --name plex --network=host -p 32400:32400 -p 32400:32400/udp -p 32469:32469 -p 32469:32469/udp \
+docker run -d --name plex --network=host -p 32400:32400 -e PUID=1000 -e PGID=2000 -p 32400:32400/udp -p 32469:32469 -p 32469:32469/udp \
 -p 5353:5353/udp -p 1900:1900/udp -v /home/docker/config:/config -v /home/docker/data:/data plexinc/pms-docker
 
 Ensuite connexion sur 
