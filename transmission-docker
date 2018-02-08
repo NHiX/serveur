@@ -7,4 +7,5 @@ mkdir /home/docker/data
 mkdir /home/docker/watch
 
 
-docker run -d --name=transmission -v /home/docker/config:/config -v /home/docker/data:/downloads -v /home/docker/watch:/watch -p 9091:9091 -p 51413:51413/udp linuxserver/transmission
+docker run -d --name=transmission -e PUID=1000 -e PGID=2000 -v /home/docker/config:/config -v /home/docker/data:/downloads -v \
+/home/docker/watch:/watch -p 9091:9091 -p 51413:51413/udp linuxserver/transmission
