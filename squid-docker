@@ -1,0 +1,6 @@
+Installation Squid par un container docker
+
+mkdir /home/docker/squid/logs
+mkdir /home/docker/squid/logs
+
+docker run --name squid -d -p 3128:3128 --volume /home/docker/squid/logs:/var/log/squid --volume /home/docker/squid/cache:/var/spool/squid datadog/squid
